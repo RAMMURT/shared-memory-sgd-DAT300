@@ -100,27 +100,36 @@ Eigen3 is required. It's expected to have its headers at /usr/include/eigen3 and
 
 ### Input
 
-Arguments and options - reference list:
+The executable accepts short options only. Every option requires a value.
 
-Flag | Meaning | Values
+Flag | Meaning | Values (default)
 --- | --- | ---
-`a` | *algorithm* | ['ASYNC', 'HOG', 'LSH', 'SYNC']
-`n` | *n.o. threads* | Integer
-`A` | *architecture* | ['MLP', 'CNN', 'LENET']
-`L` | *n.o. hidden layers* | Integer (applies for MLP only)
-`U` | *n.o. hidden neurons per layer* | Integer (applies for MLP only)
-`B` | *persistence bound* | Integer (applies for LEASHED only)
-`e` | *n.o. epochs* | Integer
-`r` | *n.o. rounds per epochs* | Integer
-`b` | *mini-batch size* | Integer
-`l` | *Step size* | Float
-`D` | *Dataset* | ['MNIST', 'FASHION-MNIST', 'CIFAR10']
-`t` | *Staleness-adaptive step size strategy* | ['NONE', 'INVERSE', 'TAIL', 'FLEET']
+`-A` | Dataset | `CIFAR10`, `CIFAR100`, `MNIST`, `FASHION-MNIST` (`CIFAR10`)
+`-n` | Maximum worker threads | Integer (`10`)
+`-l` | Learning rate | Float (`0.005`)
+`-u` | Momentum | Float (`0`)
+`-b` | Mini-batch size | Integer (`16`)
+`-e` | Number of epochs | Integer (`500`)
+`-s` | Steps per epoch | Integer (`3125`)
+`-P` | Parallelism controller | `static`, `ternary`, `window`, `pattern`, `model` (`static`)
+`-M` | Monitor | `window`, `ema`, `eval` (`window`)
+`-D` | Dispatcher | `async`, `semisync`, `fully_sync` (`async`)
+`-F` | Results directory | Path (`./experiments`)
+`-p` | Probe steps for the `ternary` or `window` controller | Integer (`128`)
+`-x` | Execution steps for the `ternary` or `window` controller | Integer (`512`)
+`-d` | Search degree for the `ternary` controller | Integer (`2`)
+`-w` | Search-window size for the `ternary` or `window` controller | Integer (`8`)
+`-0` | Initial parallelism for the `window` controller | Integer (half of `-n`)
+`-c` | Semi-sync period update strategy | `decay`, `probe`, `follow_m` (`decay`)
+`-y` | Initial semi-sync period | Integer (`8000`)
+`-q` | Semi-sync period reduction interval | Integer (`4096`)
+`-z` | Semi-sync period reduction step | Integer (`0`)
+`-m` | Minimum semi-sync period | Integer (`4`)
+`-W` | Semi-sync probe-window offset | Integer (`16`)
+`-S` | Semi-sync probe-window step | Integer (`4`)
+`-L` | Semi-sync probe loss scalar | Float (`0.9`)
 
-to see all options:
- ```sh
- ./cmake-build/debug/mininn --help
- ```
+The network architecture is selected automatically from `-A`; there is no separate architecture flag. The current executable does not implement a `--help` option.
 
 ### Output
 
@@ -135,27 +144,24 @@ Field | Meaning
 
 ### Examples
 
-Multi-layer perceptron (MLP) training for 5 epochs batch size 512 and step size 0.005 with 8 threads using LEASHED-SGD:
+Asynchronous CIFAR-10 training for 5 epochs with 8 threads:
  ```sh
- ./cmake-build-debug/mininn -a LSH -n 8 -A MLP -L 3 -U 128 -e 5 -r 469 -b 512 -l 0.005
+ ./cmake-build/mininn -A CIFAR10 -n 8 -e 5 -s 3125 -b 16 -l 0.005 -u 0.5 -P static -M window -D async
  ```
 
-Multi-layer perceptron (MLP) training with 8 threads using Hogwild!:
+Fully synchronous Fashion-MNIST training for 10 epochs with 16 threads:
  ```sh
- ./cmake-build-debug/mininn -a HOG -n 8 -A MLP -L 3 -U 128 -e 5 -r 469 -b 512 -l 0.005
+ ./cmake-build/mininn -A FASHION-MNIST -n 16 -e 10 -s 3750 -b 16 -l 0.002 -u 0.5 -P static -M window -D fully_sync
  ```
 
-Convolutional neural network (CNN) training with 8 threads using LEASHED-SGD:
+Semi-synchronous CIFAR-100 training using the decaying-period strategy:
  ```sh
- ./cmake-build-debug/mininn -a LSH -n 8 -A CNN -e 5 -r 469 -b 512 -l 0.005
+ ./cmake-build/mininn -A CIFAR100 -n 32 -e 10 -s 3125 -b 16 -l 0.005 -u 0.5 -P static -M window -D semisync -c decay -y 256 -q 4096 -z 2 -m 4
  ```
 
-Async-SGD LeNet training on CIFAR-10 with 16 threads, with and without TAIL-Tau:
+Asynchronous CIFAR-10 training with the adaptive window parallelism controller, writing results to a custom directory:
  ```sh
- ./cmake-build-debug/mininn -a ASYNC -n 16 -A LENET -D 'CIFAR10' -e 100 -b 16 -l 0.005 -t TAIL
- ```
- ```sh
- ./cmake-build-debug/mininn -a ASYNC -n 16 -A LENET -D 'CIFAR10' -e 100 -b 16 -l 0.005 -t NONE
+ ./cmake-build/mininn -A CIFAR10 -n 64 -e 10 -s 3125 -b 16 -l 0.005 -u 0.3 -P window -0 32 -w 12 -p 1024 -x 8192 -M eval -D async -F ./experiments/window
  ```
 
 
