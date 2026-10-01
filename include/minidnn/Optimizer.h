@@ -25,7 +25,22 @@ namespace MiniDNN {
         typedef Vector::AlignedMapType AlignedMapVec;
 
         double alpha() const {
-            return 1. / std::max(std::sqrt(tau), 1.);
+            return 1.;
+
+            // Note: this is ugly code. I know. Consider it a proof of concept :P
+            // set up constants
+            double e = 2.718281828;
+            double c = 1.5;
+            double ln_2c = 1.09861; // assume c = 1.5
+            double k = 16; // k = num_threads
+            double n = ln_2c / k;
+
+            // f(x) = 0.5 + c * e ^(((ln 3) / k) * x)
+            // Call like f(tau)
+            // This formula is set up such that f(0) = 2, f(k) = 1, f(inf) = 0.5
+            return 0.5 + 1.5 * std::pow(e, -tau * n);
+
+            // return 1. / std::max(std::sqrt(tau), 1.);
         }
 
     public:
