@@ -34,8 +34,11 @@ namespace MiniDNN {
             else if (num_threads / 2 <= this->tau && this->tau <= num_threads) {
                 return 0.5;
             }
-            else {
+            else if (num_threads <= this->tau && this->tau <= num_threads * 1.25) {
                 return 0.2;
+            }
+            else {
+                return 0;
             }
         }
 
