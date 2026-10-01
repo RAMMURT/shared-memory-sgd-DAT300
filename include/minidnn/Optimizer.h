@@ -1,6 +1,7 @@
 #ifndef OPTIMIZER_H_
 #define OPTIMIZER_H_
 
+#include <cmath>
 #include <Eigen/Core>
 #include "Config.h"
 
@@ -17,15 +18,22 @@ namespace MiniDNN {
 /// The interface of optimization algorithms
 ///
     class Optimizer {
+
     protected:
         typedef Eigen::Matrix<Scalar, Eigen::Dynamic, 1> Vector;
         typedef Vector::ConstAlignedMapType ConstAlignedMapVec;
         typedef Vector::AlignedMapType AlignedMapVec;
 
+        double alpha() const {
+            return 1. / std::max(std::sqrt(tau), 1.);
+        }
+
     public:
         Scalar m_lrate;
 
         float step_scale_factor = 1.0;
+
+        long tau = 0;
 
         Optimizer() {}
 

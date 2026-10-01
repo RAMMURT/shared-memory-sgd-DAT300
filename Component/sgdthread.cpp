@@ -66,6 +66,7 @@ void SGDWorkerAsync::run() {
 
                 const long param_version_end = global_param_ptr->timestamp;
                 long tau = param_version_end - param_version_start;
+                this->optim->tau = tau;
 
                 this->network->update_cw(this->optim.get());
 

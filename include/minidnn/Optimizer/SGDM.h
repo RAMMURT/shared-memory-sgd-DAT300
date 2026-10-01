@@ -56,13 +56,13 @@ namespace MiniDNN {
                 //std::cout << "this update: " << delta_i << std::endl;
             }
             prev_delta_w[layer_n](i) = delta_i;
-            return delta_i;
+            return delta_i * alpha();
         }
 
         Scalar get_b_delta(int layer_n, int i, Scalar m_db_i) {
             Scalar delta_i = (- step_scale_factor * m_lrate * m_db_i) + mu * prev_delta_b[layer_n](i);
             prev_delta_b[layer_n](i) = delta_i;
-            return delta_i;
+            return delta_i * alpha();
         }
     };
 
