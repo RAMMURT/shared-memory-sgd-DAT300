@@ -6,7 +6,7 @@
 
 namespace MiniDNN {
 
-StandardModelInterface::StandardModelInterface(SystemExecutor &exec, NetworkTopology ntw,  double lrate, double mu, int seed)
+StandardModelInterface::StandardModelInterface(SystemExecutor &exec, NetworkTopology ntw,  double lrate, double mu, int seed, int num_threads)
     : ModelInterface(exec, ntw) {
     // const std::string &dataset_name = exec.get_batcher()->get_dataset_name();
     //
@@ -36,7 +36,7 @@ StandardModelInterface::StandardModelInterface(SystemExecutor &exec, NetworkTopo
     // network.init(0, 0.01, seed);
 
     // Create optimizer
-    this->optimizer = std::shared_ptr<SGDM>(new SGDM());
+    this->optimizer = std::shared_ptr<SGDM>(new SGDM(num_threads));
     this->optimizer->initialize_state(_network.current_param_container_ptr->param_list.size());
     this->optimizer->m_lrate = lrate;
     this->optimizer->mu = mu;

@@ -29,7 +29,7 @@ namespace MiniDNN {
         Scalar m_eps;
         Scalar m_decay;
 
-        RMSProp() :
+        RMSProp(int num_threads) : Optimizer(num_threads),
                 m_lrate(Scalar(0.001)), m_eps(Scalar(1e-6)), m_decay(Scalar(0.9)) {}
 
         RMSProp(RMSProp &) = default;

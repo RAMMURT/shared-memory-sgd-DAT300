@@ -199,7 +199,7 @@ int main(int argc, char *argv[]) {
     }
     std::cout << "Parameter count = " << num_params << "\n";
 
-    auto *model = new StandardModelInterface(exec, network, o_lrate, o_momentum, seed);
+    auto *model = new StandardModelInterface(exec, network, o_lrate, o_momentum, seed, o_parallelism_limit);
 
     if (o_dispatcher == "async") {
         exec.set_dispatcher(std::make_shared<AsyncDispatcher>(exec));

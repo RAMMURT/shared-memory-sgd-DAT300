@@ -12,7 +12,7 @@ class StandardModelInterface : public ModelInterface {
 protected:
     std::shared_ptr<SGDM> optimizer;
 public:
-    StandardModelInterface(SystemExecutor &exec, NetworkTopology ntw, double lrate, double mu, int seed);
+    StandardModelInterface(SystemExecutor &exec, NetworkTopology ntw, double lrate, double mu, int seed, int num_threads);
 
     std::shared_ptr<Optimizer> get_optimizer() { return optimizer; }
 };

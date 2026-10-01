@@ -29,7 +29,7 @@ namespace MiniDNN {
         Scalar m_lrate;
         Scalar m_eps;
 
-        AdaGrad() :
+        AdaGrad(int num_threads) : Optimizer(num_threads),
                 m_lrate(Scalar(0.01)), m_eps(Scalar(1e-7)) {}
 
         AdaGrad(AdaGrad &) = default;

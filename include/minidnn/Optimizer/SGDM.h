@@ -23,7 +23,7 @@ namespace MiniDNN {
         std::vector<Vector> prev_delta_w;
         std::vector<Vector> prev_delta_b;
 
-        SGDM() :  m_lrate(Scalar(0.01)), mu(Scalar(0.9)) {}
+        SGDM(int num_threads) : Optimizer(num_threads), m_lrate(Scalar(0.01)), mu(Scalar(0.9)) {}
 
         SGDM(SGDM &) = default;
 

@@ -25,22 +25,18 @@ namespace MiniDNN {
         typedef Vector::AlignedMapType AlignedMapVec;
 
         double alpha() const {
-            return 1.;
-
-            // Note: this is ugly code. I know. Consider it a proof of concept :P
-            // set up constants
-            double e = 2.718281828;
-            double c = 1.5;
-            double ln_2c = 1.09861; // assume c = 1.5
-            double k = 16; // k = num_threads
-            double n = ln_2c / k;
-
-            // f(x) = 0.5 + c * e ^(((ln 3) / k) * x)
-            // Call like f(tau)
-            // This formula is set up such that f(0) = 2, f(k) = 1, f(inf) = 0.5
-            return 0.5 + 1.5 * std::pow(e, -tau * n);
-
-            // return 1. / std::max(std::sqrt(tau), 1.);
+            if (this->tau <= std::sqrt(num_threads)) {
+                return 2;
+            }
+            else if (std::sqrt(num_threads) <= this->tau && this->tau <= num_threads / 2) {
+                return 1;
+            }
+            else if (num_threads / 2 <= this->tau && this->tau <= num_threads) {
+                return 0.5;
+            }
+            else {
+                return 0.2;
+            }
         }
 
     public:
@@ -49,8 +45,11 @@ namespace MiniDNN {
         float step_scale_factor = 1.0;
 
         long tau = 0;
+        int num_threads = 0;
 
-        Optimizer() {}
+        Optimizer(int num_threads) {
+            this->num_threads = num_threads;
+        }
 
         virtual Optimizer *clone() = 0;
 
