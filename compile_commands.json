@@ -1,1 +1,110 @@
-cmake-build/compile_commands.json
+[
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/main.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/main.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/main.cpp",
+  "output": "CMakeFiles/mininn.dir/main.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/mnist.cc.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/mnist.cc",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/mnist.cc",
+  "output": "CMakeFiles/mininn.dir/mnist.cc.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/asyncdispatcher.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/asyncdispatcher.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/asyncdispatcher.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/asyncdispatcher.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/semisyncdispatcher.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/semisyncdispatcher.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/semisyncdispatcher.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/semisyncdispatcher.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/model_interface.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/model_interface.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/model_interface.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/model_interface.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/search_controller.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/search_controller.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/search_controller.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/search_controller.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/sgdthread.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/sgdthread.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/sgdthread.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/sgdthread.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/simplebatchcontroller.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/simplebatchcontroller.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/simplebatchcontroller.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/simplebatchcontroller.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/threadworkerpool.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/threadworkerpool.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/threadworkerpool.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/threadworkerpool.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/windowmonitor.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/windowmonitor.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/windowmonitor.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/windowmonitor.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/emamonitor.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/emamonitor.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/emamonitor.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/emamonitor.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/evalmonitor.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/evalmonitor.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/evalmonitor.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/evalmonitor.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/systemexecutor.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/systemexecutor.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/systemexecutor.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/systemexecutor.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/window_controller.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/window_controller.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/window_controller.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/window_controller.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/patterncontroller.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/patterncontroller.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/patterncontroller.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/patterncontroller.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/elasticbatchcontroller.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/elasticbatchcontroller.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/elasticbatchcontroller.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/elasticbatchcontroller.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/cifar.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cifar.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cifar.cpp",
+  "output": "CMakeFiles/mininn.dir/cifar.cpp.o"
+},
+{
+  "directory": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/cmake-build",
+  "command": "/usr/bin/c++  -I/usr/local/opt/llvm/include -I/usr/include/eigen3 -I/usr/include/eigen3/unsupported -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include -I/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/include/minidnn  -fopenmp -DEIGEN_DONT_PARALLELIZE -O2 -std=gnu++20 -o CMakeFiles/mininn.dir/Component/modelling_controller.cpp.o -c /home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/modelling_controller.cpp",
+  "file": "/home/ramazan/0_Chalmers/DAT300_Data_Driven_Support_for_Cyber_Physical_Systems/shared-memory-sgd-DAT300/Component/modelling_controller.cpp",
+  "output": "CMakeFiles/mininn.dir/Component/modelling_controller.cpp.o"
+}
+]

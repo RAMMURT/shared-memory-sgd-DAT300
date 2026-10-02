@@ -52,6 +52,7 @@ cmake-build
 meeting-8mar
 
 .venv
+.venv-viewer/
 __pycache__
 .ipynb_checkpoints
 data1.json
