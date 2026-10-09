@@ -1,4 +1,4 @@
-OUT_DIR=experiments/dat300/experiment4
+OUT_DIR=experiments/dat300/experiment5/a-2.0
 mkdir -p $OUT_DIR
 
 ./cmake-build/mininn -A CIFAR10 -D async -n 16 -e 5 -b 16 -l 0.005 -F $OUT_DIR
