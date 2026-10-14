@@ -25,9 +25,11 @@ namespace MiniDNN {
         typedef Vector::AlignedMapType AlignedMapVec;
 
         double alpha() const {
-            if (tau > this->num_threads * 1.125) {
-                return 0.;
-            }
+            // return 1.;
+
+            // if (tau > this->num_threads * 1.125) {
+            //     return 0.;
+            // }
             return std::pow(2, 1 - ((2 * tau) / this->num_threads));
         }
 
