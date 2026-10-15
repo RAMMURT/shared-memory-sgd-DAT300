@@ -1,5 +1,6 @@
 #include "ParameterContainer.h"
 #include "minidnn/Component/Worker.hpp"
+#include "minidnn/Optimizer/MindTheStep.h"
 #include <chrono>
 
 // #define DUMMY
@@ -67,7 +68,9 @@ void SGDWorkerAsync::run() {
                 const long param_version_end = global_param_ptr->timestamp;
                 long tau = param_version_end - param_version_start;
 
-                this->network->update_cw(this->optim.get());
+                auto &mind = static_cast<MindTheStep &>(*optim);
+                if (mind.prepare_step(tau, _exec.get_paracontr()->get_parallelism()))
+                    this->network->update_cw(this->optim.get());
 
                 const auto t2 = HRClock::now();
 
@@ -157,7 +160,9 @@ void SGDWorkerSynchronous::run() {
     const long param_version_end = global_param_ptr->timestamp;
     long tau = param_version_end - param_version_start;
 
-    this->network->update_cw(this->optim.get());
+    auto &mind = static_cast<MindTheStep &>(*optim);
+    if (mind.prepare_step(tau, _exec.get_paracontr()->get_parallelism()))
+        this->network->update_cw(this->optim.get());
 
     long end = step_ind;
     const long finished_step = _exec.get_dispatcher()->finish_step(this->_id, step_ind, end);
