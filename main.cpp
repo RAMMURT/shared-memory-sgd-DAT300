@@ -316,8 +316,24 @@ int main(int argc, char *argv[]) {
     results["step_acceptance_rate"] = (double)exec._accepted_steps / (double)(exec._accepted_steps + exec._rejected_steps);
     results["end_accuracy"] = -1;
 
+    const auto mind = static_cast<MindTheStep &>(*model->get_optimizer()).diagnostics();
+    json mind_stats;
+    mind_stats["workers"] = mind.workers;
+    mind_stats["histogram_samples"] = mind.histogram_samples;
+    mind_stats["applied_steps"] = mind.applied;
+    mind_stats["discarded_steps"] = mind.discarded;
+    mind_stats["zero_steps"] = mind.zero;
+    mind_stats["capped_steps"] = mind.capped;
+    mind_stats["mean_step_size"] = mind.mean_step_size;
+    mind_stats["normalized_mean_step_size"] = mind.normalized_mean_step_size;
+    mind_stats["tau_histogram"] = std::vector<unsigned long long>(
+        mind.histogram.begin(), mind.histogram.end());
+    results["mindthestep"] = mind_stats;
+
     json meta;
     meta["learning_rate"] = o_lrate;
+    meta["optimizer"] = "MindTheStep-K0";
+    meta["mindthestep_k"] = 0;
     meta["momentum"] = o_momentum;
     meta["num_threads"] = o_parallelism_limit;
     meta["batch_size"] = o_batch_size;
