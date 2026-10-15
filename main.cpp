@@ -25,7 +25,7 @@ using namespace MiniDNN;
 using namespace jsoncons;
 
 int main(int argc, char *argv[]) {
-    std::string output_folder = "./experiments";
+    std::string output_folder = "./experiments/dat300/mind";
 
     // Default parameters
     std::string dataset_name = "CIFAR10";
@@ -344,7 +344,7 @@ int main(int argc, char *argv[]) {
     results["meta"] = meta;
 
     const std::filesystem::path exp_dir = output_folder;
-    create_directory(exp_dir);
+    create_directories(exp_dir);
 
     auto t = std::time(nullptr);
     auto tm = *std::localtime(&t);
