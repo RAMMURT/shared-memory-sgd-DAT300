@@ -2,6 +2,7 @@
 #define OUTPUT_MULTICLASSENTROPY_H_
 
 #include <iostream>
+#include <cmath>
 #include <Eigen/Core>
 #include <stdexcept>
 #include "../Config.h"
@@ -124,6 +125,10 @@ namespace MiniDNN {
             const Scalar *din_data = m_din.data();
 
             for (int i = 0; i < nelem; i++) {
+                if (!std::isfinite(din_data[i])) {
+                    throw std::runtime_error(
+                        "Non-finite cross-entropy derivative: training diverged");
+                }
                 if (din_data[i] < Scalar(0)) {
                     res += std::log(-din_data[i]);
                 }
